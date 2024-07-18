@@ -1,5 +1,4 @@
 import { Box, useMediaQuery } from "@mui/material";
-import DashboardContainer from "../../components/DashboardContainer";
 import Info_row_1 from "./Info_row_1";
 import Info_row_2 from "./Info_row_2";
 import Info_row_3 from "./Info_row_3";
