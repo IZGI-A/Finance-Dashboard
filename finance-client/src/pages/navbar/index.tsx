@@ -15,7 +15,7 @@ const Navbar = (props: Props) => {
       <FlexContainer gap="0.75rem">
         <AcUnitIcon sx={{ fontSize: "28px" }} />
         <Typography variant="h4" fontSize="16px">
-          Finans App
+          Finance App
         </Typography>
       </FlexContainer>
 
