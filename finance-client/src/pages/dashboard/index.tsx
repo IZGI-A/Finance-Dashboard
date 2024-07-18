@@ -1,5 +1,8 @@
 import { Box, useMediaQuery } from "@mui/material";
 import DashboardContainer from "../../components/DashboardContainer";
+import Info_row_1 from "./Info_row_1";
+import Info_row_2 from "./Info_row_2";
+import Info_row_3 from "./Info_row_3";
 
 
 const largeScreenLayout = `
@@ -70,16 +73,9 @@ const Dashboard = () => {
             }
       }
     >
-        <DashboardContainer gridArea="sectionA" />
-        <DashboardContainer gridArea="sectionB" />
-        <DashboardContainer gridArea="sectionC" />
-        <DashboardContainer gridArea="sectionD" />
-        <DashboardContainer gridArea="sectionE" />
-        <DashboardContainer gridArea="sectionF" />
-        <DashboardContainer gridArea="sectionG" />
-        <DashboardContainer gridArea="sectionH" />
-        <DashboardContainer gridArea="sectionI" />
-        <DashboardContainer gridArea="sectionJ" />
+        <Info_row_1 /> 
+        <Info_row_2 />
+        <Info_row_3 /> 
    
     </Box>
   );
