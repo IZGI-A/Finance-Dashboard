@@ -3,6 +3,7 @@ import { useGetFinanceKpisQuery } from "../../state/financeapi";
 
 const Info_row_1 = () => {
     const {data}  = useGetFinanceKpisQuery()
+    console.log("data: ",data)
   return (
     <>
         <DashboardContainer gridArea="sectionA" />
