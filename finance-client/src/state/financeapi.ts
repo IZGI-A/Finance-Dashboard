@@ -1,4 +1,5 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
+import { GetFinanceKpisResponse } from "./types";
 
 export const financeapi = createApi({
 
@@ -7,7 +8,7 @@ export const financeapi = createApi({
     tagTypes: ["FKpis"],
 
     endpoints: (builder) => ({
-        getFinanceKpis: builder.query <void, void> ({
+        getFinanceKpis: builder.query <Array<GetFinanceKpisResponse>, void> ({
             query: () => "finance/kpis/",
             providesTags: ["FKpis"],
         }),

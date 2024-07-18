@@ -41,7 +41,7 @@ const KPISchema = new Schema(
     totalProfit: currencyOptions,
     totalRevenue: currencyOptions,
     totalExpenses: currencyOptions,
-    expenseByCategory: {
+    expensesByCategory: {
       type: Map,
       of: currencyOptions,
     },
