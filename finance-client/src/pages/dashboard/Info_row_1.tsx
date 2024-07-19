@@ -5,7 +5,15 @@ import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContai
 import { useTheme } from "@mui/material";
 import ContainerTitle from "../../components/ContainerTitle";
 
-const ChartContainer = ({ title, subtitle, sideText, children, gridArea }) => (
+type Props = {
+  title: string;
+  subtitle: string;
+  sideText: string;
+  children: React.ReactNode;
+  gridArea: string;
+};
+
+const ChartContainer = ({ title, subtitle, sideText, children, gridArea }: Props) => (
   <DashboardContainer gridArea={gridArea}>
     <ContainerTitle title={title} subtitle={subtitle} sideText={sideText} />
     <ResponsiveContainer width="100%" height="100%">
@@ -16,6 +24,7 @@ const ChartContainer = ({ title, subtitle, sideText, children, gridArea }) => (
 
 const InfoRow1 = () => {
   const { data } = useGetFinanceKpisQuery();
+  console.log("Finance KPIs data: ", data);
   const { palette } = useTheme();
 
   const prepareData = (dataKeyMap) => 
@@ -67,7 +76,7 @@ const InfoRow1 = () => {
 
   const renderLineChart = (data) => (
     <LineChart data={data} margin={{ top: 20, right: 0, left: -10, bottom: 55 }}>
-      <CartesianGrid vertical={false} stroke={palette.grey[800]} />
+      <CartesianGrid vertical={false} stroke={palette.secondary[800]} />
       <XAxis dataKey="name" tickLine={false} style={{ fontSize: "10px" }} />
       <YAxis yAxisId="left" tickLine={false} axisLine={false} style={{ fontSize: "10px" }} />
       <YAxis yAxisId="right" orientation="right" tickLine={false} axisLine={false} style={{ fontSize: "10px" }} />
