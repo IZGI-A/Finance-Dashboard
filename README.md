@@ -1,4 +1,4 @@
-# Finance-App
+# Finance Dashboard
 
 ## Frontend
 
